@@ -1,5 +1,5 @@
 # create Accounts.txt if not exist
-
+# Changed the name of atm.py to main.py which is how everyone uses the starting file of python, like i dont know which file is the starting file so its hard to check and read the code so make sure to always use the starting file or main file as main.py
 try:
     # read the 'Accounts.txt' file
     # if you try to open non existing file in read mode, this will throw an error
