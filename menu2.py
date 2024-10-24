@@ -1,13 +1,13 @@
-import os
 import withdraw
 import deposit
 import show_history
 import change_password
-
-
+from info import info_display
+from utils import clear_terminal
 def clear_screen():
+    clear_terminal()
     # function to clear the output of the screen
-    os.system('clear')
+
     print()  # print blank line after clearing the screen
 
 
@@ -24,7 +24,13 @@ def menu2(account):
 
     clear_screen()
     if ch == 1:
-        print("ID: {}\nName: {}\nBalance: {}\n".format(account[0], account[1], account[3]))
+        clear_screen()
+        try:
+            info_display(account)
+        except KeyboardInterrupt:
+            clear_screen()
+            
+        
     elif ch == 2:
         show_history.show_history(account)
     elif ch == 3:

@@ -1,6 +1,6 @@
 import read_file
 import os
-
+from utils import clear_terminal
 """show_history function: shows the processes made to a certain account"""
 
 
@@ -35,7 +35,7 @@ def show_history(ls):
     # id_list[line][2:6]  process_date
     # id_list[line][7]    before_process
     # id_list[line][8]    after_process
-    os.system('clear')
+    clear_terminal()
     top_line = '\nID\t' + 'Type'.center(len('change_password')) + 'Date and Time'.center(40) + 'before'.center(10) + 'after'.center(15)
     print(top_line)
     print('-' * len(top_line))
@@ -61,4 +61,4 @@ def show_history(ls):
         print('ERROR: Wrong choice')
 
     input('\nPress Enter to go back..')
-    os.system('clear')
+    clear_terminal()

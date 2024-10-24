@@ -13,6 +13,6 @@ except FileNotFoundError:
 # import modules
 import menu1
 import os
-
-os.system('clear')
+from utils import clear_terminal
+clear_terminal()
 menu1.menu1()  # start the program - call menu1() function
